@@ -185,3 +185,246 @@ footer p {
   text-align: center;
   color: #663300;
 }
+
+/* //registrataion */
+
+/* Form container */
+#registrationForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Improved box shadow */
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Text inputs and select */
+
+/* Text, password, and email input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 75vh;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Text, password, and email input fields hover */
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+  border-color: #999;
+}
+
+/* Text, password, and email input fields focus */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #663300;
+  outline: none;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Select */
+select {
+  width: 101%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Select hover */
+select:hover {
+  border-color: #999;
+}
+
+/* Select focus */
+select:focus {
+  border-color: #663300;
+  outline: none;
+}
+
+/* Option */
+option {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Option hover */
+option:hover {
+  background-color: #f9f9f9;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Submit button */
+/* Submit button */
+button[type="submit"] {
+  background-color: #663300;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Set width to 100% to occupy full width of its container */
+  max-width: 300px; /* Limit max-width for better readability on larger screens */
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Ensure button occupies full width */
+}
+
+/* Submit button hover */
+button[type="submit"]:hover {
+  background-color: #552200;
+}
+
+button[type="submit"]:hover {
+  background-color: #552200;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* oder section */
+
+/* Form container */
+#orderForm {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Improved box shadow */
+}
+
+/* Form groups */
+#orderForm .form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+#orderForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Text inputs, select, and textarea */
+#orderForm input[type="text"],
+#orderForm input[type="password"],
+#orderForm input[type="email"],
+#orderForm input[type="tel"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+#orderForm select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+/* Text inputs, select, and textarea hover */
+#orderForm input[type="text"]:hover,
+#orderForm input[type="password"]:hover,
+#orderForm input[type="email"]:hover,
+#orderForm select:hover {
+  border-color: #999;
+}
+
+/* Text inputs, select, and textarea focus */
+#orderForm input[type="text"]:focus,
+#orderForm input[type="password"]:focus,
+#orderForm input[type="email"]:focus,
+#orderForm select:focus {
+  border-color: #663300;
+  outline: none;
+}
+
+/* Radio buttons */
+#orderForm input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Checkbox */
+#orderForm input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Submit button */
+#orderForm button[type="submit"] {
+  background-color: #663300;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Submit button hover */
+#orderForm button[type="submit"]:hover {
+  background-color: #552200;
+}
