@@ -1,74 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Life - Order</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body style="background-color: #f9f5f3;" >
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="background-color: #f9f5f3">
     <header>
-        <div class="container">
-            <h1>Sweet Life</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="order.html">Order</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <h1>Sweet Life</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="order.html" class="active">Order</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main style="padding-top: 2vh; padding-bottom: 3vh; background-color: #f9f5f3; " >
-        <form id="orderForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="deliveryType">Delivery or Pickup:</label>
-                <select id="deliveryType" name="deliveryType" required>
-                    <option value="">Select...</option>
-                    <option value="delivery">Delivery</option>
-                    <option value="pickup">Pickup</option>
-                </select>
-            </div>
+    <main
+      style="padding-top: 1vh; padding-bottom: 3vh; background-color: #f9f5f3"
+    >
+      <form
+        id="orderForm"
+        action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+        method="post"
+        onsubmit="return validateForm()"
+      >
+        <div class="form-group">
+          <label for="deliveryType">Delivery or Pickup:</label>
+          <select id="deliveryType" name="deliveryType" required>
+            <option value="">Select...</option>
+            <option value="delivery">Delivery</option>
+            <option value="pickup">Pickup</option>
+          </select>
+        </div>
 
-            <div id="deliveryAddressGroup" class="form-group">
-                <label for="deliveryAddress">Delivery Address:</label>
-                <input type="text" id="deliveryAddress" name="deliveryAddress">
-            </div>
+        <div id="deliveryAddressGroup" class="form-group">
+          <label for="deliveryAddress">Delivery Address:</label>
+          <input type="text" id="deliveryAddress" name="deliveryAddress" />
+        </div>
 
-            <div class="form-group">
-                <label for="billingAddress">Billing Address:</label>
-                <input type="text" id="billingAddress" name="billingAddress" required>
-            </div>
+        <div id="billingAddressSection" class="form-group">
+          <label for="billingAddress">Billing Address:</label>
+          <input
+            type="text"
+            id="billingAddress"
+            name="billingAddress"
+            required
+          />
+          <!-- Checkbox for Same as Delivery Address -->
+          <label style="font-size: 14px; padding-top: 8px; display: flex; "
+            ><input type="checkbox" id="sameAsDelivery" name="sameAsDelivery" />
+            <p>Same as Delivery Address</p>
+            </label
+          >
+        </div>
 
-            <div class="form-group">
-                <label for="contactNumber">Contact Number:</label>
-                <input type="tel" id="contactNumber" name="contactNumber" required>
-            </div>
+        <div class="form-group">
+          <label for="contactNumber">Contact Number:</label>
+          <input type="tel" id="contactNumber" name="contactNumber" required />
+        </div>
 
-            <div class="form-group">
-                <label for="email">Email for Receipt:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+        <div class="form-group">
+          <label for="email">Email for Receipt:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
 
-            <div class="form-group" style="display: flex; justify-content: space-between; " >
-                <label>Pay on Pickup or Online:</label>
-                <label><input type="radio" name="paymentType" value="pickup"> Pay on Pickup</label>
-                <label><input type="radio" name="paymentType" value="online"> Pay Online</label>
-            </div>
+        <div
+          class="form-group"
+          style="display: flex; justify-content: space-between"
+        >
+          <label>Pay on Pickup or Online:</label>
+          <label
+            ><input type="radio" name="paymentType" value="pickup" /> Pay on
+            Pickup</label
+          >
+          <label
+            ><input type="radio" name="paymentType" value="online" /> Pay
+            Online</label
+          >
+        </div>
 
-            <div id="creditCardInfoGroup" class="form-group">
-                <label for="creditCardInfo">Credit Card Information:</label>
-                <input type="text" id="creditCardInfo" name="creditCardInfo">
-            </div>
+        <div class="form-group">
+          <label for="creditCardType">Credit Card Type:</label>
+          <select
+            id="creditCardType"
+            name="creditCardType"
+            onchange="limitCreditCardLength()"
+          >
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </div>
 
-            <button type="submit">Place Order</button>
-        </form>
+        <!-- Credit Card Number Input -->
+        <div class="form-group">
+          <label for="creditCardNumber">Credit Card Number:</label>
+          <input
+            type="text"
+            id="creditCardNumber"
+            name="creditCardNumber"
+            required
+          />
+        </div>
+
+        <button type="submit">Place Order</button>
+      </form>
     </main>
     <footer>
-        <div class="">
-            <p>&copy; 2024 Sweet Life</p>
-        </div>
+      <div class="">
+        <p>&copy; 2024 Sweet Life</p>
+      </div>
     </footer>
-</body>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

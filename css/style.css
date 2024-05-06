@@ -23,6 +23,11 @@ h1 {
   margin: 0;
 }
 
+nav ul li a.active {
+  color: #cc6600; /* Dark brown */
+  font-weight: bold;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
