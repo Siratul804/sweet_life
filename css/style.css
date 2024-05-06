@@ -433,3 +433,23 @@ button[type="submit"]:hover {
 #orderForm button[type="submit"]:hover {
   background-color: #552200;
 }
+
+#deliveryAddress {
+  width: 35vh !important;
+  height: auto;
+}
+
+#billingAddress {
+  width: 35vh !important;
+  height: auto;
+}
+
+#emailReceipt {
+  width: 35vh !important;
+  height: auto;
+}
+
+#contactNumberOder {
+  width: 35vh !important;
+  height: auto;
+}
