@@ -367,7 +367,6 @@ button[type="submit"]:hover {
 #orderForm input[type="password"],
 #orderForm input[type="email"],
 #orderForm input[type="tel"] {
-  width: calc(100% - 22px);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -434,22 +433,10 @@ button[type="submit"]:hover {
   background-color: #552200;
 }
 
-#deliveryAddress {
-  width: 35vh !important;
-  height: auto;
-}
-
-#billingAddress {
-  width: 35vh !important;
-  height: auto;
-}
-
-#emailReceipt {
-  width: 35vh !important;
-  height: auto;
-}
-
+#deliveryAddress,
+#billingAddress,
+#emailReceipt,
 #contactNumberOder {
-  width: 35vh !important;
+  width: 33vh;
   height: auto;
 }
