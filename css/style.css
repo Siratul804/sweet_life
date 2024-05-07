@@ -437,6 +437,6 @@ button[type="submit"]:hover {
 #billingAddress,
 #emailReceipt,
 #contactNumberOder {
-  width: 33vh;
+  width: 34vh;
   height: auto;
 }
